@@ -1,0 +1,29 @@
+{
+    "models" : 
+    [
+        {
+            "model" : "fms",
+            "instance" : "1",
+            "props" : {
+                "start" : 1.0,
+                "autonomous" : 15.0,
+                "between" : 2.0,
+                "teleop" : 135.0,
+                "create_early" : true
+            }
+        },
+        {
+            "model" : "motortest",
+            "instance" : "1",
+            "props" : {
+                "shooter:motor:1:index" : 5,
+                "shooter:motor:1:type" : "sparkmax-brushless",
+                "shooter:motor:2:index" : 6,
+                "shooter:motor:2:type" : "sparkmax-brushless",
+                "oldkv" : 0.0001311853912,
+                "kv" : 0.007701446565303899365216384940402,
+                "change" : 10000000.0
+            }
+        }
+    ]
+}
