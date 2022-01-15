@@ -6,6 +6,7 @@ package frc.robot;
 
 import org.xero1425.base.XeroRobot;
 import org.xero1425.base.controllers.AutoController;
+import org.xero1425.base.controllers.TeleopController;
 import org.xero1425.misc.BadParameterTypeException;
 import org.xero1425.misc.MissingParameterException;
 import org.xero1425.misc.SimArgs;
@@ -33,8 +34,14 @@ public class MotorCtrl extends XeroRobot {
     return "motorctrl";
   }
 
+  @Override
   public AutoController createAutoController() throws MissingParameterException, BadParameterTypeException {
     return new MotorCtrlAutoController(this) ;
+  }
+
+  @Override
+  public TeleopController createTeleopController() {
+    return new MotorCtrlTeleopCtrl(this) ;
   }
   
   protected void hardwareInit() throws Exception {

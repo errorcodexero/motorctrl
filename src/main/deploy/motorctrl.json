@@ -1,16 +1,40 @@
 {
-  "system": {},
+  "system": {
+    "messages": {
+      "actions" : true,
+      "tankdrive": true,
+      "turret": false,
+      "shooter": false,
+      "droid": false,
+      "alarms": false,
+      "gamepiecemanipulator": false,
+      "conveyor": false,
+      "intake": false,
+      "droid-limelight": false,
+      "targettracker": false,
+      "droidoi": false,
+      "blinky": false,
+      "pathmanager": false,
+      "xerorobot": false,
+      "fireaction": false,
+      "conveyor_model": false,
+      "conveyor_ball_model": false,
+      "pathfollowing": false,
+      "climber": false
+  },
+
+  },
   "subsystems": {
     "motortest": {
       "hw": {
         "motors": {
           "1": {
             "type": "sparkmax_brushless",
-            "canid": 5
+            "canid": 1
           },
           "2": {
             "type": "sparkmax_brushless",
-            "canid": 6
+            "canid": 2
           },
           "neutral_mode": "coast"
         },
