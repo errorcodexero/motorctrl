@@ -14,12 +14,6 @@ public class MotorCtrlTeleopCtrl extends TeleopController {
 
     @Override
     public void init() {
-        MotorCtrlRobotSubsystem robsys = (MotorCtrlRobotSubsystem)getRobot().getRobotSubsystem() ;
-        TestMotorSubsystem test = robsys.getTestmotors() ;
-        try {
-            test.setAction(new PowerTestAction(test)) ;
-        } catch (MissingParameterException | BadParameterTypeException | BadMotorRequestException e) {
-        }
     }
 
     @Override

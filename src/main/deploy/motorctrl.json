@@ -21,26 +21,22 @@
       "conveyor_ball_model": false,
       "pathfollowing": false,
       "climber": false
-  },
-
+    }
   },
   "subsystems": {
-    "motortest": {
+    "motor1": {
       "hw": {
         "motors": {
           "1": {
             "type": "sparkmax_brushless",
-            "canid": 1
-          },
-          "2": {
-            "type": "sparkmax_brushless",
-            "canid": 2
+            "canid": 1,
+            "inverted": true
           },
           "neutral_mode": "coast"
         },
         "encoder": {
           "type": "motor",
-          "m": 1,
+          "m": 0.02380952380952380952380952380952,
           "b": 0
         }
       },
@@ -53,12 +49,37 @@
         "max" : 1.0,
         "imax" : 0.0
       }
-    }
+    },
+    "motor2": {
+      "hw": {
+        "motors": {
+          "1": {
+            "type": "sparkmax_brushless",
+            "canid": 1
+          },
+          "neutral_mode": "coast"
+        },
+        "encoder": {
+          "type": "motor",
+          "m": 0.02380952380952380952380952380952,
+          "b": 0
+        }
+      },
+      "testvelaction" : {
+        "kp" : 1.0,
+        "ki" : 0.0,
+        "kd" : 0.0,
+        "kf" : 0.0,
+        "min" : -1.0,
+        "max" : 1.0,
+        "imax" : 0.0
+      }
+    }    
   },
   "testmode": {
     "enabled": true,
     "which": 0,
-    "power": 0.5,
+    "power": 0.20,
     "duration": 5.0,
     "distance": 0.0,
     "name": "Test_Straight"

@@ -4,16 +4,24 @@ import org.xero1425.base.RobotSubsystem;
 import org.xero1425.base.XeroRobot;
 
 public class MotorCtrlRobotSubsystem extends RobotSubsystem {
-    TestMotorSubsystem sub_ ;
+    TestMotorSubsystem sub1_ ;
+    TestMotorSubsystem sub2_ ;
 
     public MotorCtrlRobotSubsystem(XeroRobot robot) throws Exception {
         super(robot, "MotorCtrlSubsystem") ;
 
-        sub_ = new TestMotorSubsystem(this) ;
-        addChild(sub_);
+        sub1_ = new TestMotorSubsystem(this, "motor1") ;
+        addChild(sub1_);
+
+        sub2_ = new TestMotorSubsystem(this, "motor2") ;
+        addChild(sub2_);
     }
 
-    public TestMotorSubsystem getTestmotors() {
-        return sub_ ;
+    public TestMotorSubsystem getMotor1() {
+        return sub1_ ;
     }
+
+    public TestMotorSubsystem getMotor2() {
+        return sub2_ ;
+    }    
 }
