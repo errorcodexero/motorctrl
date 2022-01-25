@@ -22,11 +22,11 @@ public class MotorCtrlTestModeAuto extends TestAutoMode {
             // Numbers 0 - 9 are for the driverbase
             //
             case 0:
-                addSubActionPair(m1, new MotorEncoderPowerAction(m1, getPower()), true);
-                addSubActionPair(m2, new MotorEncoderPowerAction(m2, getPower()), true);
+                addSubActionPair(m1, new MotorEncoderPowerAction(m1, getPower(), getDuration()), false);
+                addSubActionPair(m2, new MotorEncoderPowerAction(m2, getPower(), getDuration()), true);
                 break ;
             case 1:
-                addSubActionPair(m1, new MotorEncoderVelocityAction(m1, "testvelaction", 100), true) ;
+                addSubActionPair(m1, new MotorEncoderVelocityAction(m1, "testvelaction", 100), false) ;
                 addSubActionPair(m2, new MotorEncoderVelocityAction(m1, "testvelaction", 100), true) ;
                 break ;     
         }

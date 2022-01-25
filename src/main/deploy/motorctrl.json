@@ -29,8 +29,7 @@
         "motors": {
           "1": {
             "type": "sparkmax_brushless",
-            "canid": 1,
-            "inverted": true
+            "canid": 1
           },
           "neutral_mode": "coast"
         },
@@ -55,7 +54,8 @@
         "motors": {
           "1": {
             "type": "sparkmax_brushless",
-            "canid": 1
+            "canid": 2,
+            "inverted" : true
           },
           "neutral_mode": "coast"
         },
@@ -79,8 +79,8 @@
   "testmode": {
     "enabled": true,
     "which": 0,
-    "power": 0.20,
-    "duration": 5.0,
+    "power": 0.35,
+    "duration": 2.0,
     "distance": 0.0,
     "name": "Test_Straight"
   }
