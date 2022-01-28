@@ -19,7 +19,7 @@ public class MotorCtrlRobotSubsystem extends RobotSubsystem {
         sub2_ = new TestMotorSubsystem(this, "motor2") ;
         addChild(sub2_);
 
-        color_ = new ColorSensorSubsystem(this, "color") ;
+        color_ = new ColorSensorSubsystem(this, "color", 2) ;
         addChild(color_) ;
     }
 
