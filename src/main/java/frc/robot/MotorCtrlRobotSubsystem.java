@@ -3,12 +3,12 @@ package frc.robot;
 import org.xero1425.base.RobotSubsystem;
 import org.xero1425.base.XeroRobot;
 
-import edu.wpi.first.wpilibj.util.Color;
+import edu.wpi.first.wpilibj.I2C;
 
 public class MotorCtrlRobotSubsystem extends RobotSubsystem {
     TestMotorSubsystem sub1_ ;
     TestMotorSubsystem sub2_ ;
-    ColorSensorSubsystem color_ ;
+    ZekeColorSensor color_ ;
 
     public MotorCtrlRobotSubsystem(XeroRobot robot) throws Exception {
         super(robot, "MotorCtrlSubsystem") ;
@@ -19,7 +19,7 @@ public class MotorCtrlRobotSubsystem extends RobotSubsystem {
         sub2_ = new TestMotorSubsystem(this, "motor2") ;
         addChild(sub2_);
 
-        color_ = new ColorSensorSubsystem(this, "color", 2) ;
+        color_ = new ZekeColorSensor(this, I2C.Port.kMXP, 0x70) ;
         addChild(color_) ;
     }
 
@@ -31,7 +31,7 @@ public class MotorCtrlRobotSubsystem extends RobotSubsystem {
         return sub2_ ;
     }    
 
-    public ColorSensorSubsystem getColor() {
+    public ZekeColorSensor getColor() {
         return color_ ;
     }
 }

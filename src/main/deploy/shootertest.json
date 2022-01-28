@@ -1,0 +1,87 @@
+{
+  "system": {
+    "messages": {
+      "actions" : true,
+      "tankdrive": true,
+      "turret": false,
+      "shooter": false,
+      "droid": false,
+      "alarms": false,
+      "gamepiecemanipulator": false,
+      "conveyor": false,
+      "intake": false,
+      "droid-limelight": false,
+      "targettracker": false,
+      "droidoi": false,
+      "blinky": false,
+      "pathmanager": false,
+      "xerorobot": false,
+      "fireaction": false,
+      "conveyor_model": false,
+      "conveyor_ball_model": false,
+      "pathfollowing": false,
+      "climber": false
+    }
+  },
+  "subsystems": {
+    "motor1": {
+      "hw": {
+        "motors": {
+          "1": {
+            "type": "sparkmax_brushless",
+            "canid": 1,
+            "inverted" : true
+          },
+          "neutral_mode": "coast"
+        },
+        "encoder": {
+          "type": "motor",
+          "m": 0.02380952380952380952380952380952,
+          "b": 0
+        }
+      },
+      "testvelaction" : {
+        "kp" : 1.0,
+        "ki" : 0.0,
+        "kd" : 0.0,
+        "kf" : 0.0,
+        "min" : -1.0,
+        "max" : 1.0,
+        "imax" : 0.0
+      }
+    },
+    "motor2": {
+      "hw": {
+        "motors": {
+          "1": {
+            "type": "sparkmax_brushless",
+            "canid": 2
+          },
+          "neutral_mode": "coast"
+        },
+        "encoder": {
+          "type": "motor",
+          "m": 0.02380952380952380952380952380952,
+          "b": 0
+        }
+      },
+      "testvelaction" : {
+        "kp" : 1.0,
+        "ki" : 0.0,
+        "kd" : 0.0,
+        "kf" : 0.0,
+        "min" : -1.0,
+        "max" : 1.0,
+        "imax" : 0.0
+      }
+    }    
+  },
+  "testmode": {
+    "enabled": true,
+    "which": 0,
+    "power": 0.35,
+    "duration": 1.5,
+    "distance": 0.0,
+    "name": "Test_Straight"
+  }
+}

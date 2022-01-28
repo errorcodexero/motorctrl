@@ -31,7 +31,7 @@ public class MotorCtrl extends XeroRobot {
 }
   
   public String getName() {
-    return "motorctrl";
+    return "climbertest";
   }
 
   @Override
